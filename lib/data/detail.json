@@ -1,0 +1,174 @@
+{
+  "id": "1366632748764102656",
+  "goodsName": "白壳红心托装（不喷码） 托装 30枚/托 6托 不喷码",
+  "productName": "白壳红心托装（不喷码）",
+  "showName": "白壳红心中码蛋托装（不含纸箱）",
+  "producerId": "1258596150793994240",
+  "producerName": "成都鲜见生态科技有限公司",
+  "goodsImages": [],
+  "inventoryType": 1,
+  "inventory": 563,
+  "headImage": "https://wechatmsg.fangguancha.com/product/product/202103/1615536511134.jpg",
+  "costPrice": 9700,
+  "cacheTime": 1615536488099,
+  "sellPrice": 9700,
+  "skuProperties": [
+    "托装",
+    "30枚/托",
+    "6托",
+    "不喷码"
+  ],
+  "salesVolume": 1965,
+  "hasChangePrice": 0,
+  "priceRatio": 1,
+  "recentConfigPrice": null,
+  "defaultCoefficient": 0,
+  "carriers": [],
+  "consumables": [],
+  "goodsConfigDto": {
+    "labelDto": {
+      "name": "红心",
+      "colour": "#f00"
+    }
+  },
+  "skuName": "托装 30枚/托 6托 不喷码",
+  "skuList": [
+    {
+      "id": "1366632748764102656",
+      "skuName": "托装 30枚/托 6托 不喷码",
+      "sellPrice": 9700,
+      "headImage": "https://wechatmsg.fangguancha.com/product/product/202103/1615536511134.jpg"
+    }
+  ],
+  "productType": {
+    "headImage": "https://wechatmsg.fangguancha.com/product/product/202103/1615536257609.jpg",
+    "productImages": [
+      "https://wechatmsg.fangguancha.com/product/product/202103/1615536511134.jpg",
+      "https://wechatmsg.fangguancha.com/product/product/202103/1615536454404.jpg",
+      "https://wechatmsg.fangguancha.com/product/product/202103/1615536462623.jpg"
+    ],
+    "detailsImages": [
+      "https://wechatmsg.fangguancha.com/product/product/202103/1615536303876.jpg"
+    ],
+    "shareContent": "更鲜更快，蛋定宝",
+    "introduce": null,
+    "productCredential": [
+      "https://wechatmsg.fangguancha.com/product/product/202103/1615536287001.png",
+      "https://wechatmsg.fangguancha.com/product/product/202103/1615536289516.png",
+      "https://wechatmsg.fangguancha.com/product/product/202103/1615536292721.png",
+      "https://wechatmsg.fangguancha.com/product/product/202103/1615536295092.png"
+    ],
+    "spuInfo": [
+      {
+        "standardName": "鸡蛋种类",
+        "type": 1,
+        "id": "1168628728915077800",
+        "options": [],
+        "option": {
+          "standardId": "1168628728915167422",
+          "standardValue": "白壳红心"
+        }
+      },
+      {
+        "standardName": "鸡种",
+        "type": 1,
+        "id": "1168628728915077801",
+        "options": [],
+        "option": {
+          "standardId": "168628728915167187",
+          "standardValue": "海兰灰"
+        }
+      },
+      {
+        "standardName": "产地",
+        "type": 1,
+        "id": "1168628728915077802",
+        "options": [],
+        "option": {
+          "standardId": "168628728915167193",
+          "standardValue": "乐山"
+        }
+      },
+      {
+        "standardName": "品牌",
+        "type": 1,
+        "id": "1168628728915077838",
+        "options": [],
+        "option": {
+          "standardId": "1168628728915167426",
+          "standardValue": "好鲜见"
+        }
+      },
+      {
+        "standardName": "包装规格",
+        "type": 1,
+        "id": "1168628728915077839",
+        "options": [],
+        "option": {
+          "standardId": "1168628728915167432",
+          "standardValue": "托装"
+        }
+      },
+      {
+        "standardName": "蛋品大小",
+        "type": 1,
+        "id": "1168628728915077840",
+        "options": [],
+        "option": {
+          "standardId": "1168628728915167436",
+          "standardValue": "中码"
+        }
+      },
+      {
+        "standardName": "产品标准号",
+        "type": 10,
+        "id": "1168628728915077804",
+        "options": [],
+        "option": {
+          "standardId": null,
+          "standardValue": "GB2749-2015"
+        }
+      },
+      {
+        "standardName": "单枚重量",
+        "type": 10,
+        "id": "1168628728915077803",
+        "options": [],
+        "option": {
+          "standardId": null,
+          "standardValue": "60-65g"
+        }
+      },
+      {
+        "standardName": "保质期",
+        "type": 10,
+        "id": "1168628728915077805",
+        "options": [],
+        "option": {
+          "standardId": null,
+          "standardValue": "30天"
+        }
+      },
+      {
+        "standardName": "检测报告",
+        "type": 10,
+        "id": "1168628728915077806",
+        "options": [],
+        "option": {
+          "standardId": null,
+          "standardValue": "有"
+        }
+      },
+      {
+        "standardName": "同城配送时效",
+        "type": 10,
+        "id": "1168628728915077807",
+        "options": [],
+        "option": {
+          "standardId": null,
+          "standardValue": "当日19点前下单，次日送达"
+        }
+      }
+    ]
+  }
+}
