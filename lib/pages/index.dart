@@ -206,6 +206,13 @@ class _IndexState extends State<Index> {
                     },
                   ),
                   ElevatedButton(
+                    child: Text('常见首页布局，搜索，菜单吸顶（带动画）'),
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routers.indexLayout,
+                          arguments: {'id': 'home'});
+                    },
+                  ),
+                  ElevatedButton(
                     child: Text('GenerateRoute'),
                     onPressed: () {
                       Navigator.pushNamed(context, '/aaa');
@@ -225,6 +232,7 @@ class _IndexState extends State<Index> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: ExpansionPanelList(
+                // elevation: 0,
                 children: [
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
@@ -283,6 +291,7 @@ class _IndexState extends State<Index> {
                         shadowColor: Colors.red,
                         side: BorderSide(),
                       ),
+                      ActionChip(label: Text('ActionChip'), onPressed: () {})
                     ],
                   ),
                   ElevatedButton(
@@ -357,7 +366,9 @@ class _IndexState extends State<Index> {
     List<Widget> _paginationList(int count, int activeIndex) {
       List<Widget> list = [];
       for (var i = 0; i < count; i++) {
-        list.add(Container(
+        list.add(AnimatedContainer(
+          duration: Duration(milliseconds: 300),
+          curve: Curves.easeInOut,
           width: activeIndex == i ? 20 : 8,
           height: 8,
           decoration: BoxDecoration(

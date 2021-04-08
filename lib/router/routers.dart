@@ -15,6 +15,7 @@ import '../pages/appBar.dart';
 import '../pages/search.dart';
 import '../pages/clip.dart';
 import '../pages/animations.dart';
+import '../pages/indexLayout.dart';
 
 class Routers {
   static String root = '/';
@@ -32,6 +33,7 @@ class Routers {
   static String search = '/search';
   static String clip = '/clip';
   static String animations = '/animations';
+  static String indexLayout = '/indexLayout';
 
   // define routes
   static final routes = {
@@ -50,6 +52,7 @@ class Routers {
     search: (context) => SearchPage(),
     clip: (context) => Clip(),
     animations: (context) => AnimationsDemo(),
+    indexLayout: (context) => IndexLayout(),
   };
 
   // common settings

@@ -22,8 +22,8 @@ http://laomengit.com/guide/widgets/MyIcon.html
 
 
 文章：
-1、 MediaQuery
-[Flutter 强大的MediaQuery控件](https://blog.csdn.net/mengks1987/article/details/105208189)
+1、 [Flutter 强大的MediaQuery控件](https://blog.csdn.net/mengks1987/article/details/105208189)
+2、 [flutter学习之二Material Design设计规范](https://www.cnblogs.com/lxlx1798/p/10490087.html),内容较长。
 
 示例：
 1. [Flutter 玩转微信——微信首页](https://zhuanlan.zhihu.com/p/149549468)

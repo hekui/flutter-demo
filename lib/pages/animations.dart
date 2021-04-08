@@ -41,13 +41,52 @@ class AnimationsDemo extends StatefulWidget {
   _AnimationsDemoState createState() => _AnimationsDemoState();
 }
 
-class _AnimationsDemoState extends State<AnimationsDemo> {
+class _AnimationsDemoState extends State<AnimationsDemo>
+    with SingleTickerProviderStateMixin {
   ContainerTransitionType _transitionType = ContainerTransitionType.fadeThrough;
+
   void _showMarkedAsDoneSnackbar(bool isMarkedAsDone) {
     if (isMarkedAsDone ?? false)
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text('Marked as done!'),
       ));
+  }
+
+  AnimationController _animationController;
+  Animation _animation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // 动画
+    _animationController = AnimationController(
+      duration: Duration(seconds: 3),
+      vsync: this,
+    );
+    _animation = CurvedAnimation(
+      parent: _animationController,
+      curve: Curves.elasticInOut,
+      reverseCurve: Curves.easeOut,
+    );
+    _animation = Tween(begin: 50.0, end: 300.0).animate(_animationController)
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          _animationController.reverse();
+        } else if (status == AnimationStatus.dismissed) {
+          _animationController.forward();
+        }
+      })
+      ..addListener(() {
+        setState(() {});
+      });
+    _animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose(); // 销毁控制器
+    super.dispose();
   }
 
   @override
@@ -115,34 +154,69 @@ class _AnimationsDemoState extends State<AnimationsDemo> {
           ),
         ),
       ),
-      body: Container(
+      body: ListView(
         padding: EdgeInsets.all(8),
-        color: Colors.teal,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              child: Text('模拟器上效果很差，请打包后在真机查看效果。'),
-            ),
-            _OpenContainerWrapper(
-              transitionType: _transitionType,
-              closedBuilder: (BuildContext _, VoidCallback openContainer) {
-                return _ExampleCard(openContainer: openContainer);
-              },
-              onClosed: _showMarkedAsDoneSnackbar,
-            ),
-            Expanded(
+        // color: Colors.teal,
+        children: [
+          Container(
+            child: Text('模拟器上效果很差，请打包后在真机查看效果。'),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          _OpenContainerWrapper(
+            transitionType: _transitionType,
+            closedBuilder: (BuildContext _, VoidCallback openContainer) {
+              return _ExampleCard(openContainer: openContainer);
+            },
+            onClosed: _showMarkedAsDoneSnackbar,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            width: 300,
+            height: 300,
+            color: Colors.grey,
+            child: Center(
               child: Container(
-                child: Center(
-                  child: Text(
-                    'Content',
-                    style: TextStyle(color: Colors.white, fontSize: 22),
-                  ),
+                // width: _animation.value.toDouble(),
+                height: _animation.value.toDouble(),
+                // width: 50,
+                // height: 50,
+                color: Colors.red,
+                child: Text(
+                  '文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容',
+                  style: TextStyle(fontSize: 38),
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            width: 300,
+            height: 300,
+            color: Colors.grey,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Expanded(
+            child: Container(
+              child: Center(
+                child: Text(
+                  'Content',
+                  style: TextStyle(fontSize: 22),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+        ],
       ),
       floatingActionButton: OpenContainer(
         transitionType: _transitionType,

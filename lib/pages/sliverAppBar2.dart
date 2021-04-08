@@ -191,13 +191,15 @@ class _SliverAppBarDemo2State extends State<SliverAppBarDemo2>
             ),
           ),
           SliverPersistentHeader(
-              pinned: true,
-              delegate: StickyTabBarDelegate(
-                  child: TabBar(
+            pinned: true,
+            delegate: StickyTabBarDelegate(
+              child: TabBar(
                 labelColor: Colors.blue,
                 controller: this.tabController,
                 tabs: [Tab(text: 'Tab1'), Tab(text: 'Tab2')],
-              ))),
+              ),
+            ),
+          ),
         ];
       },
       body: TabBarView(
@@ -219,9 +221,15 @@ class StickyTabBarDelegate extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
+    print('shrinkOffset $shrinkOffset');
     return Container(
       color: Colors.white,
-      child: this.child,
+      // decoration: BoxDecoration(
+      //   color: Colors.white,
+      // ),
+      child: Container(
+        child: this.child,
+      ),
     );
   }
 
