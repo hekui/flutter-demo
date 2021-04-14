@@ -104,7 +104,7 @@ class _BorderPageState extends State<BorderPage> {
                           ),
                         ),
                         Text(
-                          'ShapeDecoration',
+                          'StadiumBorder',
                           style: TextStyle(fontSize: 8),
                         ),
                       ],
