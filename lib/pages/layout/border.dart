@@ -264,7 +264,7 @@ class _BorderPageState extends State<BorderPage> {
                       Expanded(
                         child: MaterialButton(
                           onPressed: () {},
-                          child: Text('MaterialButton1'),
+                          child: Text('体育场形状按钮'),
                           shape: StadiumBorder(
                             side: BorderSide(
                               width: 2,
@@ -278,7 +278,7 @@ class _BorderPageState extends State<BorderPage> {
                       Expanded(
                         child: MaterialButton(
                           onPressed: () {},
-                          child: Text('MaterialButton2'),
+                          child: Text('圆角矩形按钮'),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5),
                             side: BorderSide(
@@ -373,7 +373,158 @@ class _BorderPageState extends State<BorderPage> {
                             style: BorderStyle.solid,
                           ),
                         ),
+                      ),
+                      SizedBox(width: 10),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Text(
+                          '体育场形状',
+                          // style: TextStyle(fontSize: 8, color: Colors.blue),
+                        ),
+                        style: ButtonStyle(
+                          shape: MaterialStateProperty.all(
+                            StadiumBorder(
+                              side: BorderSide(
+                                width: 2,
+                                color: Colors.blue,
+                                style: BorderStyle.solid,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Text(
+                          '圆角矩形',
+                          // style: TextStyle(fontSize: 8, color: Colors.blue),
+                        ),
+                        style: ButtonStyle(
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              side: BorderSide(
+                                width: 2,
+                                color: Colors.blue,
+                                style: BorderStyle.solid,
+                              ),
+                            ),
+                          ),
+                        ),
                       )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      ElevatedButton.icon(
+                        onPressed: () {},
+                        icon: Icon(Icons.home),
+                        label: Text('Home'),
+                      ),
+                      // SizedBox(width: 10),
+                      // ElevatedButton.icon(
+                      //   onPressed: () {},
+                      //   icon: Icon(Icons.home),
+                      //   label: Text('Home'),
+                      //   style: ButtonStyle(
+                      //     shape: MaterialStateProperty.all(
+                      //       StadiumBorder(
+                      //         side: BorderSide(
+                      //           width: 2,
+                      //           color: Colors.blue,
+                      //           style: BorderStyle.solid,
+                      //         ),
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
+                      SizedBox(width: 10),
+                      Container(
+                        // width: 60,
+                        height: 20,
+                        child: ElevatedButton.icon(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.home,
+                            size: 8,
+                          ),
+                          label: Text(
+                            'Home is',
+                            style: TextStyle(
+                              fontSize: 8,
+                            ),
+                          ),
+                          style: ButtonStyle(
+                            shape: MaterialStateProperty.all(
+                              StadiumBorder(
+                                side: BorderSide(
+                                  width: 2,
+                                  color: Colors.blue,
+                                  style: BorderStyle.solid,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Container(
+                        // width: 60,
+                        height: 20,
+                        child: TextButton.icon(
+                          onPressed: () {},
+                          icon: Icon(Icons.home, size: 8),
+                          label: Text(
+                            'Home',
+                            style: TextStyle(fontSize: 8),
+                          ),
+                          style: ButtonStyle(
+                            padding:
+                                MaterialStateProperty.all(EdgeInsets.all(0)),
+                            shape: MaterialStateProperty.all(
+                              StadiumBorder(
+                                side: BorderSide(
+                                  width: 1,
+                                  color: Colors.blue,
+                                  style: BorderStyle.solid,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Container(
+                        height: 16,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Row(
+                            children: [
+                              Icon(Icons.home, size: 8),
+                              SizedBox(width: 2),
+                              Text(
+                                'Home',
+                                style: TextStyle(fontSize: 8),
+                              ),
+                            ],
+                          ),
+                          style: ButtonStyle(
+                            minimumSize: MaterialStateProperty.all(Size(0, 0)),
+                            padding: MaterialStateProperty.all(
+                                EdgeInsets.symmetric(horizontal: 5)),
+                            shape: MaterialStateProperty.all(
+                              StadiumBorder(
+                                side: BorderSide(
+                                  width: 1,
+                                  color: Colors.blue,
+                                  style: BorderStyle.solid,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],
