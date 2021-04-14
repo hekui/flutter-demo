@@ -213,6 +213,20 @@ class _IndexState extends State<Index> {
                     },
                   ),
                   ElevatedButton(
+                    child: Text('布局 - GridView 混合布局'),
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routers.gridViewLayout,
+                          arguments: {'id': 'home'});
+                    },
+                  ),
+                  ElevatedButton(
+                    child: Text('布局 - Border'),
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routers.borderLayout,
+                          arguments: {'id': 'home'});
+                    },
+                  ),
+                  ElevatedButton(
                     child: Text('GenerateRoute'),
                     onPressed: () {
                       Navigator.pushNamed(context, '/aaa');

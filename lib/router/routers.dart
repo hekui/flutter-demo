@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/pages/layout/border.dart';
+import 'package:shop/pages/layout/gridView.dart';
 import '../pages/app.dart';
 import '../pages/detail.dart';
 import '../pages/fullscreen.dart';
@@ -34,6 +36,8 @@ class Routers {
   static String clip = '/clip';
   static String animations = '/animations';
   static String indexLayout = '/indexLayout';
+  static String gridViewLayout = '/gridViewLayout';
+  static String borderLayout = '/borderLayout';
 
   // define routes
   static final routes = {
@@ -53,6 +57,8 @@ class Routers {
     clip: (context) => Clip(),
     animations: (context) => AnimationsDemo(),
     indexLayout: (context) => IndexLayout(),
+    gridViewLayout: (context) => GridViewPage(),
+    borderLayout: (context) => BorderPage(),
   };
 
   // common settings
