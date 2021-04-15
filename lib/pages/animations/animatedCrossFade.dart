@@ -13,7 +13,7 @@ class _AnimatedCrossFadePageState extends State<AnimatedCrossFadePage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AnimatedIcon'),
+        title: Text('AnimatedCrossFadePage'),
       ),
       body: ListView(
         children: [
