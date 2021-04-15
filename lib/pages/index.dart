@@ -206,6 +206,21 @@ class _IndexState extends State<Index> {
                     },
                   ),
                   ElevatedButton(
+                    child: Text('Animation - AnimatedCrossFadePage'),
+                    onPressed: () {
+                      Navigator.pushNamed(
+                          context, Routers.animatedCrossFadePage,
+                          arguments: {'id': 'home'});
+                    },
+                  ),
+                  ElevatedButton(
+                    child: Text('Animation - AnimatedIcon'),
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routers.animatedIcon,
+                          arguments: {'id': 'home'});
+                    },
+                  ),
+                  ElevatedButton(
                     child: Text('Animation - pageRoute'),
                     onPressed: () {
                       Navigator.pushNamed(context, Routers.animationPageRoute,

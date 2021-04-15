@@ -136,16 +136,18 @@ class _PageViewPageState extends State<PageViewPage> {
                       Navigator.push(
                         context,
                         PageRouteBuilder(
-                          transitionDuration: Duration(milliseconds: 300),
-                          pageBuilder: (ctx, ani1, ani2) {
+                          // transitionDuration: Duration(milliseconds: 300),
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) => App(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            var curve = Curves.ease;
+                            var tween = Tween<double>(begin: 0, end: 1)
+                                .chain(CurveTween(curve: curve))
+                                .animate(animation);
                             return FadeTransition(
-                              child: App(),
-                              opacity: Tween(begin: 0.0, end: 1.0).animate(
-                                CurvedAnimation(
-                                  parent: ani1, //动画样式
-                                  curve: Curves.fastOutSlowIn, //动画曲线
-                                ),
-                              ),
+                              opacity: tween,
+                              child: child,
                             );
                           },
                         ),

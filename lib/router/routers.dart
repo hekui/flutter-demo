@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/pages/animations/animatedCrossFade.dart';
+import 'package:shop/pages/animations/animatedIcon.dart';
 import 'package:shop/pages/animations/pageRoute.dart';
 import 'package:shop/pages/layout/border.dart';
 import 'package:shop/pages/layout/gridView.dart';
@@ -37,6 +39,8 @@ class Routers {
   static String search = '/search';
   static String clip = '/clip';
   static String animations = '/animations';
+  static String animatedCrossFadePage = '/animatedCrossFadePage';
+  static String animatedIcon = '/animatedIcon';
   static String animationPageRoute = '/animationPageRoute';
   static String indexLayout = '/indexLayout';
   static String gridViewLayout = '/gridViewLayout';
@@ -60,6 +64,8 @@ class Routers {
     search: (context) => SearchPage(),
     clip: (context) => Clip(),
     animations: (context) => AnimationsDemo(),
+    animatedCrossFadePage: (context) => AnimatedCrossFadePage(),
+    animatedIcon: (context) => AnimatedIconPage(),
     animationPageRoute: (context) => PageRoute1(),
     indexLayout: (context) => IndexLayout(),
     gridViewLayout: (context) => GridViewPage(),
