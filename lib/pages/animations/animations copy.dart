@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
-import 'search.dart';
+import '../search.dart';
 
 class AnimationsDemo extends StatefulWidget {
   @override

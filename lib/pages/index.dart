@@ -206,6 +206,13 @@ class _IndexState extends State<Index> {
                     },
                   ),
                   ElevatedButton(
+                    child: Text('Animation - pageRoute'),
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routers.animationPageRoute,
+                          arguments: {'id': 'home'});
+                    },
+                  ),
+                  ElevatedButton(
                     child: Text('常见首页布局，搜索，菜单吸顶（带动画）'),
                     onPressed: () {
                       Navigator.pushNamed(context, Routers.indexLayout,
@@ -223,6 +230,13 @@ class _IndexState extends State<Index> {
                     child: Text('布局 - Border'),
                     onPressed: () {
                       Navigator.pushNamed(context, Routers.borderLayout,
+                          arguments: {'id': 'home'});
+                    },
+                  ),
+                  ElevatedButton(
+                    child: Text('布局 - 左右滑动切换页面（PageView）'),
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routers.pageviewLayout,
                           arguments: {'id': 'home'});
                     },
                   ),

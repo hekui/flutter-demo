@@ -91,7 +91,8 @@ class MyApp extends StatelessWidget {
           selectedItemColor: Colors.green,
         ),
       ),
-      initialRoute: Routers.root,
+      initialRoute: '/pageviewLayout',
+      // initialRoute: Routers.root,
       routes: Routers.routes,
       onGenerateRoute: (RouteSettings settings) =>
           Routers.onGenerateRoute(settings),

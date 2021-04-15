@@ -2,8 +2,8 @@
     package="com.example.shop">
   <uses-permission android:name="android.permission.INTERNET"/>
   <application
-        android:label="shop"
-        android:icon="@mipmap/ic_launcher">
+        android:label="flutter-demo"
+        android:icon="@mipmap/ic_launcher_ddb">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

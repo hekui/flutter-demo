@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shop/pages/animations/pageRoute.dart';
 import 'package:shop/pages/layout/border.dart';
 import 'package:shop/pages/layout/gridView.dart';
+import 'package:shop/pages/layout/pageView.dart';
 import '../pages/app.dart';
 import '../pages/detail.dart';
 import '../pages/fullscreen.dart';
@@ -16,7 +18,7 @@ import '../pages/drawer.dart';
 import '../pages/appBar.dart';
 import '../pages/search.dart';
 import '../pages/clip.dart';
-import '../pages/animations.dart';
+import '../pages/animations/animations.dart';
 import '../pages/indexLayout.dart';
 
 class Routers {
@@ -35,9 +37,11 @@ class Routers {
   static String search = '/search';
   static String clip = '/clip';
   static String animations = '/animations';
+  static String animationPageRoute = '/animationPageRoute';
   static String indexLayout = '/indexLayout';
   static String gridViewLayout = '/gridViewLayout';
   static String borderLayout = '/borderLayout';
+  static String pageviewLayout = '/pageviewLayout';
 
   // define routes
   static final routes = {
@@ -56,9 +60,11 @@ class Routers {
     search: (context) => SearchPage(),
     clip: (context) => Clip(),
     animations: (context) => AnimationsDemo(),
+    animationPageRoute: (context) => PageRoute1(),
     indexLayout: (context) => IndexLayout(),
     gridViewLayout: (context) => GridViewPage(),
     borderLayout: (context) => BorderPage(),
+    pageviewLayout: (context) => PageViewPage(),
   };
 
   // common settings
