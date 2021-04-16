@@ -1,6 +1,6 @@
-# shop
+# flutter-demo 
 
-A new Flutter project.
+学习记录的大部分常见布局、混合布局、动画等等。
 
 ## Getting Started
 
