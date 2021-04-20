@@ -17,6 +17,9 @@ class _AnimatedCrossFadePageState extends State<AnimatedCrossFadePage>
       ),
       body: ListView(
         children: [
+          Container(
+            child: Text('2个子组件在切换时出现交叉渐入的效果'),
+          ),
           ElevatedButton(
             child: Text('切换'),
             onPressed: () {
@@ -62,6 +65,7 @@ class _AnimatedCrossFadePageState extends State<AnimatedCrossFadePage>
             height: 60,
             margin: EdgeInsets.symmetric(vertical: 10),
             color: Colors.blue,
+            child: Text('当矩形过渡到圆形时有一个抖动，矩形直接变为圆形直径，解决抖动问题使用layoutBuilder'),
           ),
           Center(
             child: AnimatedCrossFade(
